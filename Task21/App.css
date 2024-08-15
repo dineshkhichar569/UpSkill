@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container{
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin: 40px 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  border: 8px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  gap: 10px;
+  /* border-image-source: linear-gradient(0deg, #ff0000, #00ff00, #0000ff, #ff0000); */
+  /* border-image-slice: 20; */
+  animation: linearColor 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s infinite alternate both;
+}
+
+@keyframes linearColor {
+  0% {
+    border-image-source: linear-gradient(0deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 20;
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 20;
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 20;
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, #ff0000, #00ff00, #0000ff, #ff0000);
+    border-image-slice: 20;
+  }
+  100% {
+border-image-source: linear-gradient(360deg, #ff0000, #00ff00, #0000ff, #ff0000);
+border-image-slice: 20;
+  }
+}
+
+.box p{
+  font-weight: 600;
+  font-size: 18px;
+}
+.box img{
+  /* border: 1px solid white; */
+  width: 60%;
+  height: 60%;
+}
+
+.btn-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 150px;
+}
+.btn-box button{
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+.btn-box button:active{
+  border: 1px solid grey;
+}
